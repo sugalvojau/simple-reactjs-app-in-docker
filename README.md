@@ -2,14 +2,22 @@
   
 Simple ReactJS app used with docker  
 
+## Use in dev (with docker-compose)  
 
-## Use in dev
+`docker-compose up --build`  
+
+
+## Use in dev (without docker-compose)
 
 Remove `node_modules` dir from your LOCAL env if you have it from running the app on your LOCAL before,  
 and run the following command to build the image for dev env usage.  
   
 `docker build -f Dockerfile.dev .`  
   
+Find the image ID, let's say it is 886c9796ccea.  
+  
+`docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 886c9796ccea`  
+(other than Linux OS may need some modifications for `$(pwd)` part)  
   
   
 # Steps ALREADY USED to create the app
