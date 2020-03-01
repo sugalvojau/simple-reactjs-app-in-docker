@@ -1,9 +1,18 @@
 # Simple ReactJS app used with docker
   
 Simple ReactJS app used with docker  
+
+
+## Use in dev
+
+Remove `node_modules` dir from your LOCAL env if you have it from running the app on your LOCAL before,  
+and run the following command to build the image for dev env usage.  
+  
+`docker build -f Dockerfile.dev .`  
   
   
-## Steps ALREADY USED to create the app
+  
+# Steps ALREADY USED to create the app
   
 As of npm@5.2.0, just use npx as described here:  
 https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b  
@@ -24,7 +33,7 @@ Official docs on CRA usage with npx:
 https://create-react-app.dev/docs/getting-started#quick-start  
   
 
-## Commands to be used with npm
+# Commands to be used with npm
   
 `npm run start` - starts app in dev server, app is not optimized for prod  
   
