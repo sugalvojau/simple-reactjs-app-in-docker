@@ -2,9 +2,12 @@
   
 Simple ReactJS app used with docker  
 
-## Use in dev (with docker-compose)  
+
+
+## Use in dev & test (with docker-compose)  
 
 `docker-compose up --build`  
+
 
 
 ## Use in dev (without docker-compose)
@@ -18,6 +21,16 @@ Find the image ID, let's say it is 886c9796ccea.
   
 `docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 886c9796ccea`  
 (other than Linux OS may need some modifications for `$(pwd)` part)  
+
+
+## Use in test (without docker-compose)
+
+`docker build -f Dockerfile.dev .`  
+  
+Find the image ID, let's say it is 886c9796ccea.  
+
+`docker run -it 886c9796ccea npm run test`  
+
   
   
 # Steps ALREADY USED to create the app
