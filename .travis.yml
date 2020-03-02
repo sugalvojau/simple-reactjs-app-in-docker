@@ -15,6 +15,5 @@ before_install:
 # https://facebook.github.io/create-react-app/docs/running-tests#linux-macos-bash
 # https://docs.docker.com/engine/reference/run/#env-environment-variables
 script:
-  - docker run -e CI=true myvendorname/my-repo-name npm run test
+  - docker run -e CI=true myvendorname/my-repo-name npm run test -- --coverage
 
-# -- --coverage
