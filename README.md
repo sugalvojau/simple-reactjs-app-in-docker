@@ -1,6 +1,11 @@
 # Simple ReactJS app used with docker
   
-Simple ReactJS app used with docker  
+Simple ReactJS app used with docker.  
+
+You need Travis CI and AWS (Beanstalk, S3, IAM) for this setup to work in the way it is designed to.  
+
+If any issues with AWS Elastic Beanstalk build, see if you need a bigger instance, 
+e.g. t2.small (paid) instead of t2.micro (may be free with trial account).  
 
 
 

@@ -1,5 +1,6 @@
 FROM node:alpine as builder
 WORKDIR '/app'
+# Try `COPY package.json ./` if the later fails on AWS. Amazon is known to have issues with `.` and `./`
 COPY package.json .
 RUN npm install
 COPY . .
