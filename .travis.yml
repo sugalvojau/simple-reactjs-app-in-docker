@@ -17,3 +17,30 @@ before_install:
 script:
   - docker run -e CI=true myvendorname/my-repo-name npm run test -- --coverage
 
+# edge: true
+#  forcing Travis to use the v2 (experimental) version of the dpl script 
+#  which does not have the bug "Missing bucket_name"
+# provider: deploy to one of many preconfigured providers - elasticbeanstalk
+#  other options: github pages, github releases, google app engine, etc.
+# app: applicationNameFromAwsBeanstalk
+# env: environmentCreatedInApplication
+# bucket_name: a-value-of-aws-s3-bucket-name-where-travisci-sends-zip-to
+#  this bucket was automatically generated after creating beanstalk app
+#  so look in S3 service bucket list
+# bucket_path: a path inside the bucket of the app
+#  if it's the first env in app then it most likely will be same as app name
+#  otherwise - something else, browse S3 bucket to find it, or create extra dir
+# on: we deploy on git push to this branch of github repo
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "docker-deploy-test"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-30647667547"
+  bucket_path: "docker-deploy-test"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
