@@ -9,6 +9,7 @@ e.g. t2.small (paid) instead of t2.micro (may be free with trial account).
 
 
 
+
 ## Use in dev & test (with docker-compose)  
 
 `docker-compose up --build`  
