@@ -31,6 +31,15 @@ Find the image ID, let's say it is 886c9796ccea.
 
 `docker run -it 886c9796ccea npm run test`  
 
+
+## Use in prod (without docker-compose)
+
+`docker build .`  
+  
+Find the image ID, let's say it is 886c9796ccea.  
+
+`docker run -p 8080:80 886c9796ccea`  
+
   
   
 # Steps ALREADY USED to create the app
