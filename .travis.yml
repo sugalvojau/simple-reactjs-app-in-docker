@@ -1,0 +1,20 @@
+# avoiding "rakefile not found" error
+language: generic
+
+# we need super user for furter actions
+sudo: reuired
+
+# Install docker to Travis CI space
+services:
+  - docker
+
+# Build a locally tagged docker image
+before_install:
+  - docker build -t myvendorname/my-repo-name -f Dockerfile.dev .
+
+# https://facebook.github.io/create-react-app/docs/running-tests#linux-macos-bash
+# https://docs.docker.com/engine/reference/run/#env-environment-variables
+script:
+  - docker run -e CI=true myvendorname/my-repo-name npm run test
+
+# -- --coverage
