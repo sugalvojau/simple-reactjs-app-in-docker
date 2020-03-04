@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sugalvojau/simple-reactjs-app-in-docker.svg?branch=master)](https://travis-ci.org/sugalvojau/simple-reactjs-app-in-docker)
+
 # Simple ReactJS app used with docker
   
 Simple ReactJS app used with docker.  
