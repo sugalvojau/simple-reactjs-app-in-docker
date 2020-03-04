@@ -35,10 +35,10 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: "eu-central-1"
-  app: "docker-deploy-test"
-  env: "Docker-env"
-  bucket_name: "elasticbeanstalk-eu-central-1-30647667547"
-  bucket_path: "docker-deploy-test"
+  app: "React by Paulius"
+  env: "ReactByPaulius-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-521279680791"
+  bucket_path: "react-by-paulius-remove-after-2020-04-05"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
